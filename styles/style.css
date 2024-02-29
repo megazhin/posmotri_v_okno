@@ -77,6 +77,47 @@ html {
   height: 103px;
 }
 
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -94,4 +135,12 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.content__list {
+  position: relative;
 }

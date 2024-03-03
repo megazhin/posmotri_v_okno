@@ -56,6 +56,7 @@ ol {
   gap: 30px;
 }
 
+
 fieldset {
   border: none;
 }
@@ -77,6 +78,12 @@ fieldset {
   justify-content: space-between;
 }
 
+.search-form__label {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
@@ -91,8 +98,8 @@ fieldset {
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
-  color: #fff;
-  background-color: inherit;
+  color: rgb(255, 255, 255, .7);
+  background-color: transparent;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-left: none;
@@ -100,14 +107,83 @@ fieldset {
   appearance: none;
 }
 
-.search-form__label {
+.search-form__textfield:active {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+input[type="checkbox"] + span {
   display: inline-block;
-  width: fit-content;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+input[type='checkbox']:checked + span {
+  border: 2px solid #1b1919;
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+  background-color: #fff;
+}
+
+.search-form__label:has(.search-form__checkbox):hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+
+.button {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: inherit;
+  text-align: center;
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background: #545050;
+}
+
 .search-form__submit-button {
-  cursor: pointer;
+  width: 194px;
+  height: 34px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  height: 34px;
 }
 
 .content__details {
@@ -166,6 +242,7 @@ fieldset {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
